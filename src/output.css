@@ -575,14 +575,20 @@
   .sticky {
     position: sticky;
   }
-  .inset-0 {
-    inset: calc(var(--spacing) * 0);
-  }
   .end-1 {
     inset-inline-end: calc(var(--spacing) * 1);
   }
   .end-2 {
     inset-inline-end: calc(var(--spacing) * 2);
+  }
+  .bottom-6 {
+    bottom: calc(var(--spacing) * 6);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
   }
   .isolate {
     isolation: isolate;
@@ -695,11 +701,14 @@
       max-width: 96rem !important;
     }
   }
-  .m-5 {
-    margin: calc(var(--spacing) * 5);
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
@@ -713,6 +722,9 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mt-44 {
+    margin-top: calc(var(--spacing) * 44);
+  }
   .mt-60 {
     margin-top: calc(var(--spacing) * 60);
   }
@@ -725,11 +737,8 @@
   .mt-\[-170px\] {
     margin-top: -170px;
   }
-  .mt-\[-200px\] {
-    margin-top: -200px;
-  }
-  .mt-\[-520px\] {
-    margin-top: -520px;
+  .mt-\[-530px\] {
+    margin-top: -530px;
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -746,11 +755,17 @@
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
   }
-  .mb-20 {
-    margin-bottom: calc(var(--spacing) * 20);
-  }
   .ml-4 {
     margin-left: calc(var(--spacing) * 4);
+  }
+  .ml-20 {
+    margin-left: calc(var(--spacing) * 20);
+  }
+  .ml-24 {
+    margin-left: calc(var(--spacing) * 24);
+  }
+  .ml-\[-485px\] {
+    margin-left: -485px;
   }
   .box-border {
     box-sizing: border-box;
@@ -839,20 +854,11 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .aspect-video {
-    aspect-ratio: var(--aspect-video);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
-  }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
@@ -866,14 +872,20 @@
   .h-48 {
     height: calc(var(--spacing) * 48);
   }
+  .h-56 {
+    height: calc(var(--spacing) * 56);
+  }
   .h-60 {
     height: calc(var(--spacing) * 60);
   }
-  .h-\[100px\] {
-    height: 100px;
+  .h-\[340px\] {
+    height: 340px;
   }
-  .h-auto {
-    height: auto;
+  .h-\[370px\] {
+    height: 370px;
+  }
+  .h-\[380px\] {
+    height: 380px;
   }
   .h-full {
     height: 100%;
@@ -896,29 +908,53 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-1\/3 {
+    width: calc(1/3 * 100%);
+  }
+  .w-1\/4 {
+    width: calc(1/4 * 100%);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-2\/3 {
+    width: calc(2/3 * 100%);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\/4 {
+    width: calc(3/4 * 100%);
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
-  }
   .w-24 {
     width: calc(var(--spacing) * 24);
   }
-  .w-36 {
-    width: calc(var(--spacing) * 36);
+  .w-\[200px\] {
+    width: 200px;
   }
-  .w-96 {
-    width: calc(var(--spacing) * 96);
+  .w-\[240px\] {
+    width: 240px;
   }
-  .w-\[300px\] {
-    width: 300px;
+  .w-\[250px\] {
+    width: 250px;
   }
-  .w-\[400px\] {
-    width: 400px;
+  .w-\[260px\] {
+    width: 260px;
+  }
+  .w-\[280px\] {
+    width: 280px;
+  }
+  .w-\[460px\] {
+    width: 460px;
+  }
+  .w-\[530px\] {
+    width: 530px;
   }
   .w-full {
     width: 100%;
@@ -952,6 +988,9 @@
   }
   .flex-shrink {
     flex-shrink: 1;
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
   }
   .shrink {
     flex-shrink: 1;
@@ -1021,6 +1060,14 @@
   .translate-full {
     --tw-translate-x: 100%;
     --tw-translate-y: 100%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-z-px {
@@ -1337,11 +1384,24 @@
   .justify-items-stretch {
     justify-items: stretch;
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -1434,6 +1494,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .scroll-auto {
     scroll-behavior: auto;
@@ -1608,9 +1671,6 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
-  }
-  .bg-red-600 {
-    background-color: var(--color-red-600);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -1796,9 +1856,6 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -1810,9 +1867,6 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
-  }
-  .py-1 {
-    padding-block: calc(var(--spacing) * 1);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -1895,6 +1949,10 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -1991,9 +2049,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .text-yellow-400 {
-    color: var(--color-yellow-400);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2486,24 +2541,19 @@
       display: block;
     }
   }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
   .md\:w-1\/3 {
     @media (width >= 48rem) {
       width: calc(1/3 * 100%);
     }
   }
-  .md\:w-48 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 48);
-    }
-  }
   .md\:w-64 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 64);
-    }
-  }
-  .md\:w-72 {
-    @media (width >= 48rem) {
-      width: calc(var(--spacing) * 72);
     }
   }
   .md\:grid-cols-2 {
@@ -2544,6 +2594,186 @@
   .lg\:grid-cols-5 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .xl\:w-\[700px\] {
+    @media (width >= 80rem) {
+      width: 700px;
+    }
+  }
+  .\32 xl\:bottom-20 {
+    @media (width >= 96rem) {
+      bottom: calc(var(--spacing) * 20);
+    }
+  }
+  .\32 xl\:bottom-24 {
+    @media (width >= 96rem) {
+      bottom: calc(var(--spacing) * 24);
+    }
+  }
+  .\32 xl\:mt-\[-50px\] {
+    @media (width >= 96rem) {
+      margin-top: -50px;
+    }
+  }
+  .\32 xl\:mt-\[-85px\] {
+    @media (width >= 96rem) {
+      margin-top: -85px;
+    }
+  }
+  .\32 xl\:mt-\[-90px\] {
+    @media (width >= 96rem) {
+      margin-top: -90px;
+    }
+  }
+  .\32 xl\:mt-\[-100px\] {
+    @media (width >= 96rem) {
+      margin-top: -100px;
+    }
+  }
+  .\32 xl\:mt-\[-150px\] {
+    @media (width >= 96rem) {
+      margin-top: -150px;
+    }
+  }
+  .\32 xl\:ml-0 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 0);
+    }
+  }
+  .\32 xl\:ml-24 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 24);
+    }
+  }
+  .\32 xl\:ml-32 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 32);
+    }
+  }
+  .\32 xl\:ml-40 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 40);
+    }
+  }
+  .\32 xl\:ml-232 {
+    @media (width >= 96rem) {
+      margin-left: calc(var(--spacing) * 232);
+    }
+  }
+  .\32 xl\:ml-\[-100px\] {
+    @media (width >= 96rem) {
+      margin-left: -100px;
+    }
+  }
+  .\32 xl\:ml-\[-540px\] {
+    @media (width >= 96rem) {
+      margin-left: -540px;
+    }
+  }
+  .\32 xl\:ml-\[-560px\] {
+    @media (width >= 96rem) {
+      margin-left: -560px;
+    }
+  }
+  .\32 xl\:ml-\[-580px\] {
+    @media (width >= 96rem) {
+      margin-left: -580px;
+    }
+  }
+  .\32 xl\:ml-\[-585px\] {
+    @media (width >= 96rem) {
+      margin-left: -585px;
+    }
+  }
+  .\32 xl\:ml-\[20px\] {
+    @media (width >= 96rem) {
+      margin-left: 20px;
+    }
+  }
+  .\32 xl\:h-52 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 52);
+    }
+  }
+  .\32 xl\:h-56 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 56);
+    }
+  }
+  .\32 xl\:h-60 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 60);
+    }
+  }
+  .\32 xl\:h-64 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 64);
+    }
+  }
+  .\32 xl\:h-80 {
+    @media (width >= 96rem) {
+      height: calc(var(--spacing) * 80);
+    }
+  }
+  .\32 xl\:h-\[400px\] {
+    @media (width >= 96rem) {
+      height: 400px;
+    }
+  }
+  .\32 xl\:h-\[420px\] {
+    @media (width >= 96rem) {
+      height: 420px;
+    }
+  }
+  .\32 xl\:h-\[430px\] {
+    @media (width >= 96rem) {
+      height: 430px;
+    }
+  }
+  .\32 xl\:h-\[450px\] {
+    @media (width >= 96rem) {
+      height: 450px;
+    }
+  }
+  .\32 xl\:w-\[300px\] {
+    @media (width >= 96rem) {
+      width: 300px;
+    }
+  }
+  .\32 xl\:w-\[340px\] {
+    @media (width >= 96rem) {
+      width: 340px;
+    }
+  }
+  .\32 xl\:w-\[350px\] {
+    @media (width >= 96rem) {
+      width: 350px;
+    }
+  }
+  .\32 xl\:w-\[360px\] {
+    @media (width >= 96rem) {
+      width: 360px;
+    }
+  }
+  .\32 xl\:w-\[530px\] {
+    @media (width >= 96rem) {
+      width: 530px;
+    }
+  }
+  .\32 xl\:w-\[560px\] {
+    @media (width >= 96rem) {
+      width: 560px;
+    }
+  }
+  .\32 xl\:w-\[580px\] {
+    @media (width >= 96rem) {
+      width: 580px;
+    }
+  }
+  .\32 xl\:w-\[600px\] {
+    @media (width >= 96rem) {
+      width: 600px;
     }
   }
 }
