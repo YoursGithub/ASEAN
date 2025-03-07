@@ -32,16 +32,41 @@
                 grid-column: span 1;
             }
         }
+
+        /* New Animation Styles */
+        .box-animation {
+            transition: all 0.3s ease-in-out;
+        }
+        .box-animation:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-floating {
+            animation: floating 3s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="h-screen">
     <div class="h-screen max-w-9xl mx-auto hidden md:block">
         <div class="flex justify-between items-center px-6 py-4 mb-2">
-            <button class="px-5 py-2 border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-gray-50">
+            <button class="px-5 py-2 border border-gray-300 rounded-full animate-fade-in text-sm text-gray-700 hover:bg-gray-50">
                 Sign Up as Partner
             </button>
-            <img src="/images/logo.png" alt="ASEAN Logo" class="h-8 object-contain" />
-            <button class="px-5 py-2 bg-indigo-500 text-sm text-white rounded-full hover:bg-indigo-600">
+            <img src="/images/logo.png" alt="ASEAN Logo" class="h-8 object-contain animate-fade-in" />
+            <button class="px-5 py-2 bg-indigo-500 text-sm animate-fade-in text-white rounded-full hover:bg-indigo-600">
                 Sign Up as Client
             </button>
         </div>
@@ -49,13 +74,13 @@
         <div class="flex gap-6 m-4">
             <div class="flex gap-5">
                 <div class="">
-                    <div class="bg-[#F3F3F3] 2xl:w-[350px] 2xl:h-[450px] p-6 w-[250px] h-[380px] text-center rounded-xl">
-                        <h2 class="font-semibold">Brunei Darussalam</h2>
-                        <p class="text-xs">Unleash your brand's potential with MetaUpSpace: Resultsdriven solutions for.</p>
+                    <div class="bg-[#F3F3F3] 2xl:w-[350px] 2xl:h-[500px] animate-floating p-6 w-[250px] h-[380px] text-center rounded-xl">
+                        <h2 class="font-semibold 2xl:mb-5">Brunei Darussalam</h2>
+                        <p class="text-sm 2xl:mb-10">Unleash your brand's potential with MetaUpSpace: Resultsdriven solutions for.</p>
                         <img src="/images/image-7.png" alt="" class="mx-auto w-full h-60 2xl:h-80 object-cover mt-5">
                     </div>
 
-                    <div class="bg-[#F3F3F3] mt-6 flex 2xl:w-[350px] w-[250px] rounded-xl">
+                    <div class="bg-[#F3F3F3] mt-6 animate-floating flex 2xl:w-[350px] 2xl:h-[150px] w-[250px] rounded-xl">
                         <div>
                             <img src="/images/image-2.png" alt="" class="mx-auto w-full h-full object-cover">
                         </div>
@@ -67,15 +92,15 @@
                 </div>
 
                 <div class="flex gap-6">
-                    <div class="bg-[#F3F3F3] mt-44 p-6 2xl:w-[300px] 2xl:h-[420px] w-[200px] h-[340px] text-center rounded-xl">
+                    <div class="bg-[#F3F3F3] animate-floating mt-44 p-6 2xl:w-[300px] 2xl:h-[490px] w-[200px] h-[340px] text-center rounded-xl">
                         <h2 class="text-lg font-semibold">Indonesia</h2>
-                        <p class="text-xs leading-relaxed">
+                        <p class="text-xs leading-relaxed 2xl:mb-5">
                             Unleash your brand's potential with MetaUpSpace: Results-driven solutions for tech, marketing, and production.
                         </p>
-                        <img src="/images/image-5.png" alt="" class="mx-auto w-[260px] h-40 2xl:h-60 object-cover rounded-lg mt-5">
+                        <img src="/images/image-5.png" alt="" class="mx-auto w-[260px] h-40 2xl:h-80 object-cover rounded-lg mt-5">
                     </div>
 
-                    <div class="bg-[#F3F3F3] flex items-center w-[240px] mt-44 h-48 rounded-xl">
+                    <div class="bg-[#F3F3F3] animate-floating flex items-center w-[240px] 2xl:h-[230px] mt-44 h-48 rounded-xl">
                         <div class="flex-shrink-0">
                             <img src="/images/image.png" alt="" class="w-24 h-full object-cover rounded-lg">
                         </div>
@@ -87,7 +112,7 @@
                         </div>
                     </div>
                     
-                    <div class="bg-[#F3F3F3] gap-5 flex w-[530px] 2xl:w-[600px] h-32 2xl:h-52 rounded-xl ml-24 p-4 justify-between absolute bottom-6 2xl:bottom-24 2xl:ml-40 left-1/2 -translate-x-1/2">
+                    <div class="bg-[#F3F3F3] animate-floating gap-5 flex w-[530px] 2xl:w-[600px] 2xl:h-60 h-32 rounded-xl ml-24 p-4 justify-between absolute bottom-6 2xl:bottom-7 2xl:ml-40 left-1/2 -translate-x-1/2">
                         <div class="flex-1">
                             <h2 class="font-semibold">Malaysia</h2>
                             <p class="text-xs mt-5">
@@ -101,7 +126,7 @@
                 </div>
             </div>
 
-            <div class="bg-[#F3F3F3] gap-5 flex 2xl:ml-[-585px] 2xl:w-[560px] w-[460px] ml-[-485px] h-40 rounded-xl p-4 justify-between">
+            <div class="bg-[#F3F3F3] gap-5 animate-floating flex 2xl:ml-[-585px] 2xl:h-[170px] 2xl:w-[560px] w-[460px] ml-[-485px] h-40 rounded-xl p-4 justify-between">
                 <div class="flex-1">
                     <h2 class="font-semibold">Cambodia</h2>
                     <p class="text-xs mt-5">
@@ -113,7 +138,7 @@
                 </div>
             </div>
             
-            <div class="bg-[#F3F3F3] p-6 w-[280px] 2xl:w-[340px] h-[370px] text-center rounded-xl">
+            <div class="bg-[#F3F3F3] animate-floating p-6 w-[280px] 2xl:w-[340px] 2xl:h-[406px] h-[370px] text-center rounded-xl">
                 <img src="/images/image-4.png" alt="" class="mx-auto w-[260px] h-40 object-cover rounded-lg">
                 <h2 class="mt-6 text-lg font-semibold">Brunei Darussalam</h2>
                 <p class="text-xs mt-5 leading-relaxed">
@@ -124,13 +149,13 @@
 
         <div class="flex justify-end mt-[-530px] m-4">
             <div class="">
-                <div class="bg-[#F3F3F3] p-6 w-[280px] 2xl:h-[430px] 2xl:w-[360px] 2xl:mt-[-85px] ml-20 h-[370px] text-center rounded-xl">
+                <div class="bg-[#F3F3F3] animate-floating p-6 w-[280px] 2xl:h-[480px] 2xl:w-[360px] 2xl:mt-[-160px] ml-20 h-[370px] text-center rounded-xl">
                     <h2 class="font-semibold">Brunei Darussalam</h2>
                     <p class="text-xs mt-5">Unleash your brand's potential with MetaUpSpace: Resultsdriven solutions for.</p>
                     <img src="/images/image-6.png" alt="" class="mx-auto w-full h-56 object-cover mt-5">
                 </div>
         
-                <div class="bg-[#F3F3F3] mt-6 flex ml-20 2xl:w-[360px] w-[280px] rounded-xl">
+                <div class="bg-[#F3F3F3] animate-floating mt-6 flex ml-20 2xl:mt-[50px] 2xl:w-[360px] 2xl:h-[150px] w-[280px] rounded-xl">
                     <div>
                         <img src="/images/image-1.png" alt="" class="mx-auto w-full h-full object-cover">
                     </div>
